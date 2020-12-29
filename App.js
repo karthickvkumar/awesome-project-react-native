@@ -4,27 +4,35 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.header}>
-      <Text style={styles.message}>Welcome to React Native</Text>
-      <Text style={styles.information}>Hello Karthick!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.wrapper}>
+        <View style={styles.header}>
+          <Text>This is Header Portion</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>This is Content Portion</Text>
+        </View>
+        <View style={styles.footer}>
+          <Text>This is Footer Portion</Text>
+        </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  wrapper : {
+    flex : 1
+  },
   header : {
-    marginTop : 200,
-    marginLeft : 25
+    flex : 2,
+    backgroundColor : 'red'
   },
-  message : {
-    fontSize : 28,
-    color: 'red',
-    fontWeight: 'bold'
+  content : {
+    flex : 8,
+    backgroundColor: 'green'
   },
-  information: {
-    fontSize: 24,
-    color: '#350f96'
+  footer : {
+    flex: 1,
+    backgroundColor: 'blue'
   }
 }) 
 
